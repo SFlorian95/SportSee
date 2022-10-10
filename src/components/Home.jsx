@@ -16,7 +16,7 @@ const Home = () => {
       {userInfo.isLoading ? (
         <span>Loading...</span>
       ) : (
-        <div>Bonjour {userInfo.data.userInfos.firstName}</div>
+        <div className='main-container'>Bonjour {userInfo.data.userInfos.firstName}</div>
       )}
     </div>
   )
