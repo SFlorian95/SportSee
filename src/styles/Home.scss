@@ -9,3 +9,17 @@ div.main-container {
     left: 200px;
     right: 200px;
 }
+
+span.firstname {
+    color: #E60000;
+}
+
+div.sub-container {
+    display: flex;
+
+    div.left-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

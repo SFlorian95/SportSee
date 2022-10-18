@@ -1,0 +1,24 @@
+div.keydata {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height: 500px;
+}
+
+div.keydata-container {
+    display: flex;
+    margin-bottom: 10px;
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        span {
+            width: 100px;
+        }
+    }
+}

@@ -33,8 +33,8 @@ const Header = () => {
           <img src={logo} alt="Logo SportSee" />
         </Link>
         <div className="horizontal-links-container">
-          {routes.map((route) => (
-            <Link to={route.path}>{route.name}</Link>
+          {routes.map((route, index) => (
+            <Link to={route.path} key={index}>{route.name}</Link>
           ))}
         </div>
       </nav>
