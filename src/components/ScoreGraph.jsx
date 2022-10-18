@@ -1,4 +1,10 @@
-import { RadialBarChart, RadialBar, PolarAngleAxis, Legend } from 'recharts'
+import {
+  RadialBarChart,
+  RadialBar,
+  PolarAngleAxis,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts'
 import '../styles/ScoreGraph.scss'
 
 /**
@@ -37,35 +43,37 @@ const ScoreGraph = ({ data }) => {
   )
   return (
     <div className="score-graph">
-      <RadialBarChart
-        cx="50%"
-        cy="50%"
-        innerRadius="80%"
-        outerRadius="90%"
-        barSize={15}
-        data={res}
-        startAngle={90}
-        endAngle={450}
-      >
-        <PolarAngleAxis type="number" domain={[0, 1]} tick={false} />
-        <RadialBar
-          minAngle={15}
-          clockWise
-          dataKey="score"
-          fill="red"
-          cornerRadius={20}
-        />
-        <Legend
-          width={120}
-          height={120}
-          layout="vertical"
-          verticalAlign="middle"
-          align="center"
-          content={<RenderLegend />}
-        />
-      </RadialBarChart>
+      <ResponsiveContainer>
+        <RadialBarChart
+          cx="50%"
+          cy="50%"
+          innerRadius="80%"
+          outerRadius="90%"
+          barSize={15}
+          data={res}
+          startAngle={90}
+          endAngle={450}
+        >
+          <PolarAngleAxis type="number" domain={[0, 1]} tick={false} />
+          <RadialBar
+             minAngle={15}
+             clockWise
+             dataKey="score"
+             fill="red"
+             cornerRadius={20}
+          />
+          <Legend
+            width={120}
+            height={120}
+            layout="vertical"
+            verticalAlign="middle"
+            align="center"
+            content={<RenderLegend />}
+          />
+        </RadialBarChart>
+      </ResponsiveContainer>
     </div>
   )
-} 
+}
 
 export default ScoreGraph

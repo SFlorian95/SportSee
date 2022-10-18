@@ -36,7 +36,7 @@ const Home = () => {
               <ActivityGraph data={userActivity.data.sessions} />
               <AverageSessionsGraph data={userAverageSessions.data.sessions} />
               <PerformanceGraph data={userPerformance.data.data} />
-              <ScoreGraph data={userInfo.data.todayScore} />
+              <ScoreGraph data={userInfo.data.todayScore || userInfo.data.score} />
             </div>
             <KeyData data={userInfo.data.keyData}/>
           </div>
