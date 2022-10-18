@@ -26,9 +26,10 @@ nav.vertical-navbar {
     flex-direction: column;
     padding: 10px;
     width: 80px;
+    height: 150vh;
     background-color: $primary;
     align-items: center;
-    padding-top: 20vh;
+    padding-top: 50vh;
 
     img {
         width: 30px;
@@ -41,8 +42,7 @@ nav.vertical-navbar {
     span {
         color: $secondary;
         font-size: 12px;
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: 50vh;
         transform: rotate(-0.25turn);
         width: 200px;
     }
