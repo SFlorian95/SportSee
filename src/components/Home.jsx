@@ -6,6 +6,7 @@ import ActivityGraph from './ActivityGraph'
 import AverageSessionsGraph from './AverageSessionsGraph'
 import PerformanceGraph from './PerformanceGraph'
 import ScoreGraph from './ScoreGraph'
+import KeyData from './KeyData'
 
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
   const userAverageSessions = useGet(`${properties.api.baseUrl}/${properties.userId}/average-sessions`)
   const userPerformance = useGet(`${properties.api.baseUrl}/${properties.userId}/performance`)
 
-  console.log(userInfo)
+  console.log(userInfo.data.keyData)
 
   if (userInfo.error) {
     return <div>Oups il y a une erreur</div>
@@ -30,10 +31,15 @@ const Home = () => {
           <h1>
             Bonjour <span className='firstname'>{userInfo.data.userInfos.firstName}</span> 
           </h1>
-          <ActivityGraph data={userActivity.data.sessions} />
-          <AverageSessionsGraph data={userAverageSessions.data.sessions} />
-          <PerformanceGraph data={userPerformance.data.data} />
-          <ScoreGraph data={userInfo} />
+          <div className='sub-container'>
+            <div className='left-container'>
+              <ActivityGraph data={userActivity.data.sessions} />
+              <AverageSessionsGraph data={userAverageSessions.data.sessions} />
+              <PerformanceGraph data={userPerformance.data.data} />
+              <ScoreGraph data={userInfo.data.todayScore} />
+            </div>
+            <KeyData data={userInfo.data.keyData}/>
+          </div>
         </div>
       )}
     </div>
