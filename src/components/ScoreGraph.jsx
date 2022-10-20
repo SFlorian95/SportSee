@@ -44,6 +44,7 @@ const ScoreGraph = ({ data }) => {
   )
   return (
     <div className="score-graph">
+      <span className="score-title">Score</span>
       <ResponsiveContainer>
         <RadialBarChart
           cx="50%"
