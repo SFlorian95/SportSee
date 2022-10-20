@@ -1,3 +1,7 @@
+/**
+ * @file Entry point of the app, manage router and
+ * launch or not mocked api in function of react app environment variable
+ */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './styles/index.scss'

@@ -9,13 +9,20 @@ import ScoreGraph from './ScoreGraph'
 import KeyData from './KeyData'
 
 
+/**
+ * Display Home page component including all charts
+ *
+ * @namespace
+ * @component
+ * @returns {Home} Return Home component
+ */
 const Home = () => {
   const userInfo = useGet(`${properties.api.baseUrl}/${properties.userId}`)
   const userActivity = useGet(`${properties.api.baseUrl}/${properties.userId}/activity`)
   const userAverageSessions = useGet(`${properties.api.baseUrl}/${properties.userId}/average-sessions`)
   const userPerformance = useGet(`${properties.api.baseUrl}/${properties.userId}/performance`)
 
-  console.log(userInfo.data.keyData)
+  console.log(userPerformance.data.data)
 
   if (userInfo.error) {
     return <div>Oups il y a une erreur</div>

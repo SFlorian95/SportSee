@@ -25,6 +25,14 @@ const routes = [
   },
 ]
 
+
+/**
+ * Component for showing header
+ *
+ * @namespace
+ * @component
+ * @returns {Header} Returns Header component
+ */
 const Header = () => {
   return (
     <header>
