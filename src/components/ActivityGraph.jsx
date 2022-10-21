@@ -15,21 +15,21 @@ import PropTypes from 'prop-types'
  * Component for showing user activity using BarChart from recharts library
  *
  * @namespace
-
+ * 
  * @see {@link https://recharts.org/en-US/api/BarChart} for further information on BarChart from recharts api
  * @component
-
+ * 
  * @example
-
+ * 
  * const data = [{day:"2020-07-01", kilogram: 80, calories:240},...]
  * return (
- *  <Activity data={data} />
+ *  <ActivityGraph data={data} />
  * )
  * @prop {Object[]} data required actvity sessions
  * @prop {String} data[].day session day
  * @prop {Number} data[].kilogram session kilogram
  * @prop {String} data[].calories session calories
- * @returns {Activity} Returns Activity component
+ * @returns {ActivityGraph} Returns ActivityGraph component
  */
 const ActivityGraph = ({ data }) => {
   /**
@@ -102,7 +102,6 @@ const ActivityGraph = ({ data }) => {
     payload: PropTypes.array,
   }
 
-  //console.log(data)
   return (
     <div className="activity-graph">
       <ResponsiveContainer width="100%" height="100%">
@@ -181,6 +180,10 @@ const ActivityGraph = ({ data }) => {
       </ResponsiveContainer>
     </div>
   )
+}
+
+ActivityGraph.prototype = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default ActivityGraph

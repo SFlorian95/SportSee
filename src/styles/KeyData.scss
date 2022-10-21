@@ -3,6 +3,7 @@ div.keydata {
     flex-direction: column;
     justify-content: space-around;
     max-height: 500px;
+    width: 20%;
 }
 
 div.keydata-container {
@@ -11,6 +12,7 @@ div.keydata-container {
     img {
         width: 60px;
         height: 60px;
+        margin-right: 10px;
     }
 
     div {

@@ -14,25 +14,25 @@ import PropTypes from 'prop-types'
  * Component for showing user performance using RadarChart from recharts library
  *
  * @namespace
-
+ * 
  * @see {@link https://recharts.org/en-US/api/RadarChart} for further information on RadarChart from recharts api
  * @component
-
+ * 
  * @example
-
+ * 
  * const data = {
  *  userId: 12,
  *  data: [ { value:80, kind: 1 },...]
  *  kind: { 1:'cardio', 2:'energy', 3:'endurance', 4:'strength', 5:'speed', 6:'intensity' }
  * }
  * return (
- *  <Performance data={data} />
+ *  <PerformanceGraph data={data} />
  * )
  * @prop {Object} data required performance data
  * @prop {number} data.userId user id
  * @prop {Object[]} data.data performance data
  * @prop {Object} data.kind performance kind
- * @returns {Performance} Returns Performance component
+ * @returns {PerformanceGraph} Returns PerformanceGraph component
  */
 const PerformanceGraph = ({ data }) => {
   const dataKind = {
@@ -95,7 +95,6 @@ const PerformanceGraph = ({ data }) => {
         <RadarChart outerRadius={75} width={300} height={300} data={dataFiltered}>
           <PolarGrid radialLines={false}/>
           <PolarAngleAxis
-            stroke='white'
             dataKey="kind"
             tickFormatter={(value) => dataKind[value].name}
             tick={{ fill: 'white', fontSize: '12px' }}
@@ -111,5 +110,11 @@ const PerformanceGraph = ({ data }) => {
   )
 }
 
+PerformanceGraph.propTypes = {
+  /**
+   * PerformanceGraph data
+   */
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
 
 export default PerformanceGraph

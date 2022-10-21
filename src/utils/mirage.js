@@ -1,3 +1,8 @@
+/**
+ * @file Manage the configuration setting for the mocked api using miragejs library
+ * @see {@link https://miragejs.com/}
+ * @namespace mirage
+ */
 import { createServer } from 'miragejs'
 import data from './data'
 
@@ -20,6 +25,12 @@ const routes = [
   },
 ]
 
+/**
+ * Create a server to mock an api using miragejs libray
+ * @memberof mockedApi
+ * @see {@link https://miragejs.com/}
+ * @method
+ */
 const create = () =>
   createServer({
     routes() {

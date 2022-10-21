@@ -6,20 +6,20 @@ import PropTypes from 'prop-types'
  * Component for showing user average sessions using LineChart from recharts library
  *
  * @namespace
-
+ * 
  * @see {@link https://recharts.org/en-US/api/LineChart} for further information on LineChart from recharts api
  * @component
-
+ * 
  * @example
-
+ * 
  * const data = [{day: 1, sessionLength: 30},...]
  * return (
- *  <AverageSessions data={data} />
+ *  <AverageSessionsGraph data={data} />
  * )
  * @prop {Object[]} data required average sessions data
  * @prop {Number} data[].day session day
  * @prop {Number} data[].sessionLength session length
- * @returns {AverageSessions} Returns AverageSessions component
+ * @returns {AverageSessionsGraph} Returns AverageSessionsGraph component
  */
 
 const AverageSessionsGraph = ({ data }) => {
@@ -67,6 +67,7 @@ const AverageSessionsGraph = ({ data }) => {
 
   return (
     <div className="average-sessions-graph">
+      <span>Durée moyenne des sessions</span>
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}

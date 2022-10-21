@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
 
+
+/**
+ * Component for showing route error message 404
+ *
+ * @namespace
+ * @component
+ * @returns {Error} Returns Error component
+ */
 const Error = () => {
     return (
         <div className="error">

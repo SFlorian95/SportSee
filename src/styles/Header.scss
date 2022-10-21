@@ -4,18 +4,26 @@ nav.horizontal-navbar {
     display: flex;
     align-items: center;
     padding: 10px;
+    line-height: 24px;
+    height: 91px;
+    width: 100%;
     background-color: $primary;
-    
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
     img {
-        width: 178px;
+        height: 61px;
+        margin-left: 28px;
     }
     
     div.horizontal-links-container {
         display: flex;
-
+        justify-content: space-around;
+        flex: 1;
         a {
             text-decoration: none;
-            margin-left: 15vw;
+            padding: 20px 20px;
             color: $secondary;
         }
     }
@@ -23,27 +31,45 @@ nav.horizontal-navbar {
 
 nav.vertical-navbar {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 80px;
-    height: 150vh;
+    justify-content: center;
+    line-height: 24px;
+    width: 117px;
+    height: 100%;
+    min-height: 319px;
     background-color: $primary;
     align-items: center;
-    padding-top: 50vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 316px;
+    }
 
     img {
         width: 30px;
         background-color: $secondary;
         padding: 10px;
         border-radius: 6px;
-        margin-bottom: 2vh;
+        margin-bottom: 20px;
+        cursor: pointer;
     }
 
     span {
+        display: inline-block;
         color: $secondary;
         font-size: 12px;
-        margin-top: 50vh;
+        line-height: 24px;
         transform: rotate(-0.25turn);
         width: 200px;
+        position: fixed;
+        z-index: 1;
+        left: -40px;
+        bottom: 100px;
     }
 }
