@@ -95,7 +95,6 @@ const PerformanceGraph = ({ data }) => {
         <RadarChart outerRadius={75} width={300} height={300} data={dataFiltered}>
           <PolarGrid radialLines={false}/>
           <PolarAngleAxis
-            stroke='white'
             dataKey="kind"
             tickFormatter={(value) => dataKind[value].name}
             tick={{ fill: 'white', fontSize: '12px' }}

@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Project 12 - Build an analytics dashboard with React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Prerequisites
+
+- [The minimum supported Node.js version is `16.14.0` (LTS)](https://nodejs.org/en/)
+- [Npm minimum version `8.3.1`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
+
+## Installation
+
+In the project root directory run `npm install`
+
 ## Available Scripts
 
-In the project directory, you can run:
+In the root project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8081](http://localhost:8081) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+The Web App calls the api on port 3000 (http://localhost:3000).
+Ensure the api is running by following this link: [run backend api](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard#22-launching-the-project).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm run mockedApi`
 
-### `npm run build`
+Runs the app in the development mode using the react app environment `mockedApi`.
+Open [http://localhost:8082](http://localhost:8082) to view it in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+the mocked api is running on port 3001 http://localhost:3001
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm doc`
 
-### `npm run eject`
+Generate jsdoc documentation at directory `/docs`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Open file `index.html` to see the full documentation of the Web App.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Test Web app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Once app is lauched you are being redirected to the dashboards 
+the userId change depending on your environment
+if you run app with `npm run mockedApi` the id will be `12`
+if you run app with `npm run start` the id will be `18`
