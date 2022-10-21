@@ -1,13 +1,9 @@
+@import './AverageSessionsGraph.scss';
 
 div.home {
-    position: relative;
-}
-
-div.main-container {
-    position: absolute;
-    top: 200px;
-    left: 200px;
-    right: 200px;
+    margin-left: 200px;
+    margin-top: 200px;
+    margin-right: 83px;
 }
 
 span.firstname {
@@ -16,10 +12,21 @@ span.firstname {
 
 div.sub-container {
     display: flex;
-
+    
     div.left-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        width: 80%;
     }
+}
+
+@media screen and (max-width:1024px) {
+    
+    div.left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

@@ -3,7 +3,24 @@ import calorieIcon from '../assets/calories-icon.png'
 import carbsIcon from '../assets/carbs-icon.png'
 import fatIcon from '../assets/fat-icon.png'
 import proteinIcon from '../assets/protein-icon.png'
+import PropTypes from 'prop-types'
 
+
+/**
+ * Component for showing user key data button
+ *
+ * @namespace
+ * 
+ * @component
+ * 
+ * @example
+ * 
+ * const data = {calorieCount: 1930, proteinCount: 155, carbohydrateCount: 290, lipidCount: 50}
+ * return (
+ *  <KeyDataButton data={data} />
+ * )
+ * @returns {KeyData} Returns KeyData component
+ */
 const KeyData = ({data}) => {
     return (
         <div className="keydata">
@@ -38,5 +55,12 @@ const KeyData = ({data}) => {
         </div>
     )
 }
+
+KeyData.propTypes = {
+    /**
+     * Key button data
+     */
+    data: PropTypes.object.isRequired,
+  }
 
 export default KeyData

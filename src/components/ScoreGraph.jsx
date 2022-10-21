@@ -6,17 +6,18 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 import '../styles/ScoreGraph.scss'
+import PropTypes from 'prop-types'
 
 /**
  * Component for showing user goal using RadialBarChart from recharts library
  *
  * @namespace
-
+ * 
  * @see {@link https://recharts.org/en-US/api/RadialBarChart} for further information on RadialBarChart from recharts api
  * @component
-
+ * 
  * @example
-
+ * 
  * const data = 0.12
  * return (
  *  <ScoreGraph data={data} />
@@ -43,6 +44,7 @@ const ScoreGraph = ({ data }) => {
   )
   return (
     <div className="score-graph">
+      <span className="score-title">Score</span>
       <ResponsiveContainer>
         <RadialBarChart
           cx="50%"
@@ -74,6 +76,13 @@ const ScoreGraph = ({ data }) => {
       </ResponsiveContainer>
     </div>
   )
+}
+
+ScoreGraph.prototype = {
+  /**
+   * ScoreGraph data
+   */
+  data: PropTypes.number,
 }
 
 export default ScoreGraph
