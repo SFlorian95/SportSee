@@ -1,4 +1,14 @@
-# Project 12 - Build an analytics dashboard with React
+# SportSee
+
+Projet de formation Openclassrooms
+
+Développez un tableau de bord d'analytics avec React
+
+![image](https://user-images.githubusercontent.com/48679043/223755936-2950b1c2-a6ee-4b30-aec0-1aef31a966bc.png)
+
+### Scénario
+
+Vous travaillez en tant que développeur chez SportSee, une startup dédiée au coaching sportif. En pleine croissance, l’entreprise va aujourd’hui lancer une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
